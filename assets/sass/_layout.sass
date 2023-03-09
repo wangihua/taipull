@@ -1,0 +1,176 @@
+.wrapper
+	display: grid
+	grid-template-columns: 1fr minmax(auto, 1200px) 1fr
+	@include xs
+		display: grid
+		grid-template-columns: 1fr
+		padding: 0.5rem 1rem
+.index-content
+	.wrapper
+		//padding-top: 2rem
+		//padding-bottom: 2rem
+		@include xs
+			padding: 0.5rem 0
+	.content-box
+		@include xs
+			margin: auto 2rem!important
+			padding-top: 2rem
+			padding-bottom: 3rem
+	.content-schedule
+		display: grid
+		grid-gap: 4rem
+		@include xs
+			grid-gap: 0
+.about-content
+	.wrapper
+		padding-top: 0
+		padding-bottom: 0
+		.content-box
+			margin-top: 4rem
+			padding-top: 0
+			p
+				margin-block-start: 0!important
+				@include xs
+					margin-block-start: 1em!important
+
+.wrapper-page-content
+	display: grid
+	grid-template-columns: 1fr 600px 600px 1fr
+	margin-top: 5rem
+	@include sm
+		display: grid
+		grid-template-columns: 1fr 2fr
+	@include sm
+		display: grid
+		grid-template-columns: 1fr
+		margin-top: 0
+		padding: 0.5rem 2rem
+.article-page-content
+	display: grid
+	grid-template-columns: 1fr minmax(auto, 1000px) 1fr
+	@include xs
+		display: grid
+		grid-template-columns: 1fr
+		padding: 0.5rem 2rem
+
+
+
+.col2
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	@include xs
+		display: grid
+		grid-template-columns: 1fr
+		margin-top: 0
+
+.col3
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	@include xs
+		display: grid
+		grid-template-columns: 1fr
+		margin-top: 0
+.xs-hidden
+	@include xs
+		display: none
+.sm-hidden
+	@include sm
+		display: none
+.md-hidden
+	@include md
+		display: none
+
+.bg-row
+	display: grid
+	grid-template-rows: 10% auto
+	@include xs
+		display: grid
+		grid-template-rows: auto
+	&-reorder
+		div:nth-child(3)
+			@include xs
+				order: 1
+		div:nth-child(2)
+			@include xs
+				order: 2
+	&-index-reroder
+		div:nth-child(1)
+			@include xs
+				order: 1
+		div:nth-child(2)
+			@include xs
+				order: 1
+		div:nth-child(3)
+			@include xs
+				order: 4
+		div:nth-child(4)
+			@include xs
+				order: 3
+		div:nth-child(5)
+			@include xs
+				order: 5
+		div:nth-child(6)
+			@include xs
+				order: 6
+
+.header-layout
+	display: grid
+	grid-template-columns: 1fr 1fr 2fr
+	@include xs
+		display: grid
+		grid-template-columns: 1fr auto
+
+.nav-layout
+	display: grid
+	grid-template-columns: 100px auto 100px
+	@include xs
+		display: grid
+		grid-template-columns: 1fr
+		grid-auto-flow: row
+		//display: none
+	.dropdown-menu
+		display: grid
+		grid-template-columns: repeat(7, 1fr)
+		@include xs
+			display: grid
+			grid-template-columns: 1fr
+			grid-auto-flow: row
+
+.main-content-layout
+	.pagelinks-layout
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		padding-top: 1rem
+		padding-bottom: 1rem
+		@include xs
+			display: grid
+			grid-template-columns: 2fr 1fr
+.page
+	&-subtitle
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+.footer-layout
+	display: grid
+	grid-template-columns: 2fr 4fr
+	@include xs
+		grid-template-columns: 2fr
+	&-info
+		@include xs
+			grid-column-start: 1
+			grid-column-end: 6
+			grid-row-start: 1
+			grid-row-end: 2
+			grid-template-columns: 2fr
+	&-links
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		@include xs
+			display: grid
+			grid-template-columns: repeat(2, 1fr)
+	&-copyright
+		display: grid
+		grid-template-columns: 2fr 2fr 3fr
+		@include xs
+			display: grid
+			grid-template-columns: 1fr
+
