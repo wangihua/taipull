@@ -1,0 +1,31 @@
+.header
+  background-color: rgba(0, 0, 0, .7) !important
+  color: $color-white
+  padding: .5rem
+  width: 100vw
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 999
+  display: block
+  
+  .logo
+    height: 2rem
+    width: auto
+    @include sm
+      height: 1.5rem
+
+  .company-name
+    line-height: 1
+    padding-left: 1.5rem
+    @include sm
+      padding-left: .5rem
+      font-size: 90%
+
+    &-ch
+      font-size: 120%
+      font-weight: bold
+      letter-spacing: 0.1rem
+    &-en
+      font-size: 80%
+      letter-spacing: 0.05rem
